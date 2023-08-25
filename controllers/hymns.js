@@ -14,6 +14,18 @@ const getHymn = (req, res) => {
     Hymn.find().then((hymn) => { res.json(hymn) }).catch((err) => { res.send(err) })
 }
 
+const deleteHymn = async (req, res, next) => {
+    const hymn = await Hymn.findById(req.params.id)
+
+    if (!hymn) {
+        res.status(400)
+        throw new Error("Hymn Unavailable")
+    }
+
+    hymn.remove()
+    res.status(200)
+}
+
 
 module.exports = {
     createHymn,
