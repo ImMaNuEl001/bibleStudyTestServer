@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 const connectDB = (req, res) => {
     try {
-        mongoose.connect(`mongodb://127.0.0.1:27017`)
+        mongoose.connect(` mongodb+srv://S_Immanuel:mTm9GtLwQqCvflfX@db.o58smqp.mongodb.net/db?retryWrites=true&w=majority`)
             .then(() => { console.log("connected to database") })
     } catch (error) {
         console.log(error)
