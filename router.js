@@ -1,6 +1,6 @@
 const express = require('express')
 const { createOpenHeavens, getOpenHeavens, deleteOpenHeavens } = require('./controllers/open.heavens')
-const { createHymn, getHymn } = require('./controllers/hymns')
+const { createHymn, getHymn, deleteHymn } = require('./controllers/hymns')
 const { createSundaySchool, getSundaySchool, deleteSundaySchool } = require('./controllers/sunday.school')
 const { createHouseFellowship, getHouseFellowship, deleteHouseFellowship } = require('./controllers/house.fellowship')
 const { createUser, getUser } = require('./controllers/user.controller')

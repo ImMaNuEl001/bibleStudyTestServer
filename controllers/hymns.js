@@ -29,5 +29,6 @@ const deleteHymn = async (req, res, next) => {
 
 module.exports = {
     createHymn,
-    getHymn
+    getHymn,
+    deleteHymn
 }
