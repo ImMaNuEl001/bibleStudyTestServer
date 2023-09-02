@@ -5,6 +5,7 @@ const { createSundaySchool, getSundaySchool, deleteSundaySchool } = require('./c
 const { createHouseFellowship, getHouseFellowship, deleteHouseFellowship } = require('./controllers/house.fellowship')
 const { createUser, getUser } = require('./controllers/user.controller')
 const { deleteOne } = require('./model/open.heaven')
+const { createNewsLetter, getNewsLetter, deleteNewsLetter } = require('./controllers/news_letter_controller')
 // const { getAll } = require('./controllers/admin.controller')
 const app = express()
 
@@ -16,6 +17,7 @@ router.post('/hymn', createHymn)
 router.post('/sundaySchool', createSundaySchool)
 router.post('/houseFellowship', createHouseFellowship)
 router.post('/user', createUser)
+router.post('/newsLetters', createNewsLetter)
 // router.post('/admin', getAll)
 
 // get request
@@ -24,12 +26,14 @@ router.get('/hymn', getHymn)
 router.get('/sundaySchool', getSundaySchool)
 router.get('/houseFellowship', getHouseFellowship)
 router.get('/user', getUser)
+router.get('/newsLetters', getNewsLetter)
 
 //delete request
 router.delete('/openHeavens/:id', deleteOpenHeavens)
 router.delete('/sundaySchool/:id', deleteSundaySchool)
 router.delete('/houseFellowship/:id', deleteHouseFellowship)
 router.delete('/hymn/:id', deleteHymn)
+router.delete('/newsLetters/:id', deleteNewsLetter)
 
 
 module.exports = router
