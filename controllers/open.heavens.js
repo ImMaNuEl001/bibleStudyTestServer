@@ -5,7 +5,8 @@ const createOpenHeavens = (req, res) => {
     const openHeavens = new OpenHeavens({
         title: req.body.title,
         document: req.body.document,
-        by: req.body.by
+        by: req.body.by,
+        date: req.body.date
     })
 
     openHeavens.save().then((data) => { res.json(data) }).catch((err) => { res.send(err) })
