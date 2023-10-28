@@ -19,6 +19,6 @@ app.use(express.json())
 
 app.use(router)
 
-app.listen(3000, (req, res) => {
+app.listen(PORT, (req, res) => {
     console.log(`app connected at localhost:${PORT}`)
 })
